@@ -1,0 +1,32 @@
+/* PRODUCTS LIST */
+.products {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.product {
+  padding: 12px;
+  border: 1px solid gray;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 6px;
+  background: linear-gradient(135deg, #c4c4c4, #ffffff);
+}
+
+.view:hover {
+  background: #000;
+  color: #fff;
+}
+
+.product-title {
+  text-transform: capitalize;
+}
+.product-body {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}

@@ -1,0 +1,43 @@
+.profile {
+  padding: 20px;
+  margin: 0 auto;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid gray;
+  margin-top: 200px;
+  background: linear-gradient(135deg, #c4c4c4, #ffffff);
+}
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: gray;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  overflow: hidden;
+  margin: 0 auto;
+  display: block;
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+}
+
+.info {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.row {
+  display: flex;
+  align-items: start;
+
+  > div {
+    padding: 4px;
+  }
+}
+.label {
+  font-weight: bold;
+}
