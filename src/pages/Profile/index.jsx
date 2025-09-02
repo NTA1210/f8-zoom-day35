@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
-import styles from "./Profile.module.scss";
 import clsx from "clsx";
+
+import styles from "./Profile.module.scss";
+import Loading from "../../components/Loading";
 
 function ProfileCard() {
   const [user, setUser] = useState(null);
@@ -51,10 +53,7 @@ function ProfileCard() {
           </div>
         </div>
       ) : (
-        <div className={clsx("loading")}>
-          <div className={clsx("loader")}></div>
-          <p className={clsx("loading-text")}>loading....</p>
-        </div>
+        <Loading text="Loading..." />
       )}
     </div>
   );

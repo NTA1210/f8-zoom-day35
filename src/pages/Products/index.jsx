@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
-import styles from "./Products.module.scss";
 import clsx from "clsx";
+
+import styles from "./Products.module.scss";
+import Loading from "../../components/Loading";
 
 function ProductsList() {
   const [products, setProducts] = useState([]);
@@ -18,12 +20,7 @@ function ProductsList() {
     <div className="products-list">
       <h1 className="title">Products List</h1>
 
-      {loading ? (
-        <div className="loading">
-          <div className="loader"></div>
-          <p className="loading-text">loading....</p>
-        </div>
-      ) : null}
+      {loading ? <Loading text="Loading..." /> : null}
       {products.length > 0 ? (
         <div className={clsx(styles.products)}>
           {products.map((product) => (

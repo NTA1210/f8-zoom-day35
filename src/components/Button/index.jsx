@@ -4,6 +4,8 @@ import PropsType from "prop-types";
 
 import styles from "./Button.module.scss";
 import PropTypes from "prop-types";
+import Loading from "../Loading";
+
 function Button({
   children,
   href,
@@ -44,11 +46,7 @@ function Button({
       href={href}
       onClick={!loading && !disabled && onClick}
     >
-      {loading && (
-        <div className={clsx(styles.loading)}>
-          <div className={clsx(styles.loader)}></div>
-        </div>
-      )}
+      {loading && <Loading />}
       <span className={clsx(loading && styles.hidden)}>{children}</span>
     </Component>
   );
